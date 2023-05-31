@@ -1,0 +1,62 @@
+:root {
+  --size: 800px;
+  --hSize: calc(var(--size) / 2);
+  --rhSize: calc(-1 * var(--hSize));
+  --perspective: 1200px;
+
+  --front-color: var(--color5);
+  --back-color: var(--color12);
+  --left-color: var(--color11);
+  --right-color: var(--color10);
+  --top-color: var(--color9);
+  --bottom-color: var(--color4);
+}
+
+.scene {
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: var(--perspective);
+  height: 100vh;
+}
+.cube {
+  position: relative;
+  transform-style: preserve-3d;
+  width: var(--size);
+  height: var(--size);
+  transform: rotateX(0) rotateY(0) translateZ(var(--rhSize));
+  animation-name: rotate-cube;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.cube-face {
+  position: absolute;
+  opacity: 80%;
+  width: var(--size);
+  height: var(--size);
+}
+.cube-face.front {
+  background-color: var(--front-color);
+  transform: rotateY(0) translateZ(var(--hSize));
+}
+.cube-face.back {
+  background-color: var(--back-color);
+  transform: rotateY(180deg) translateZ(var(--hSize));
+}
+.cube-face.left {
+  background-color: var(--left-color);
+  transform: rotateY(-90deg) translateZ(var(--hSize));
+}
+.cube-face.right {
+  background-color: var(--right-color);
+  transform: rotateY(90deg) translateZ(var(--hSize));
+}
+.cube-face.top {
+  background-color: var(--top-color);
+  transform: rotateX(90deg) translateZ(var(--hSize));
+}
+.cube-face.bottom {
+  background-color: var(--bottom-color);
+  transform: rotateX(-90deg) translateZ(var(--hSize));
+}

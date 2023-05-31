@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+.header {
+  text-align: center;
+  font-family: "Monoton", cursive;
+  font-size: 72px;
+  background-color: var(--color3);
+}
+body {
+  display: grid;
+  grid-template-rows: minmax(80px, 1fr) minmax(80px, 1fr) 8fr minmax(80px, 1fr);
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Share Tech Mono", monospace;
+  background: linear-gradient(var(--color3), 80%, rgba(255, 255, 255, 0));
+}
+.maincontent {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.text-wrapper {
+  height: 100%;
+  width: 80%;
+  opacity: 80%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    20%,
+    var(--color9),
+    80%,
+    rgba(255, 255, 255, 0)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.text-wrapper h1 {
+  font-size: 48px;
+  font-weight: 100;
+  font-family: "Monoton", cursive;
+}
+.text-wrapper p {
+  font-size: xx-large;
+  font-family: "Share Tech Mono", monospace;
+}

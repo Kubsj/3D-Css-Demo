@@ -1,0 +1,77 @@
+:root {
+  --color1: #fdfdbd;
+  --color2: #c8ffd4;
+  --color3: #b8e8fc;
+  --color4: #b1afff;
+  --color5: #98a8f8;
+  --color6: #bccef8;
+  --color7: #cdfcf6;
+  --color8: #faf7f0;
+  --color9: #eef1ff;
+  --color10: #d2daff;
+  --color11: #aac4ff;
+  --color12: #b1b2ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: larger;
+}
+body {
+  min-height: 100vh;
+
+  /* Bg animation */
+  background: linear-gradient(
+    45deg,
+    var(--color6),
+    var(--color9),
+    var(--color12),
+    var(--color4)
+  );
+  background-size: 400% 400%;
+  animation-name: background-color-rotation;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+@keyframes background-color-rotation {
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+}
+.return-button {
+  z-index: 10;
+  position: absolute;
+  cursor: pointer;
+  opacity: 50%;
+  border: 1px solid white;
+  background: linear-gradient(90deg, var(--color5), rgba(255, 255, 255, 0));
+  width: 100px;
+  height: 100px;
+  border-radius: 0 50% 50% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.return-button span {
+  cursor: pointer;
+  user-select: none;
+  font-size: 72px;
+  background-color: var(--color1);
+
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-color: var(--color1);
+
+  background-image: conic-gradient(var(--color1), var(--color5));
+}
