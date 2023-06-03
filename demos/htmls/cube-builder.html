@@ -16,7 +16,69 @@
     <div class="return-button" onclick="window.location.assign('/index.html')">
       <span class="material-icons-outlined"> arrow_back_ios </span>
     </div>
-    <div class="control-panel"></div>
+    <!-- Top tools menu -->
+    <div class="tools-menu">
+      <div id="select-tool" onclick="ChangeTool(0)">
+        <span class="material-icons-outlined"> mouse </span>
+      </div>
+      <div id="cube-tool" onclick="ChangeTool(1)">
+        <span class="material-icons-outlined"> brush </span>
+      </div>
+      <div id="erase-tool" onclick="ChangeTool(2)">
+        <span class="material-icons-outlined"> cancel </span>
+      </div>
+    </div>
+    <!-- Cube Options -->
+    <div class="control-panel">
+      <div class="title-panel"></div>
+      <div class="content">
+        <form>
+          <label for="opacity-input"> Cube's color </label>
+          <input
+            type="color"
+            name="color-input"
+            value="#00ff00"
+            id="colorInput"
+            onchange="UpdateValues()"
+          />
+          <br />
+          <label for="opacity-input"> Cube's opacity </label>
+          <input
+            type="range"
+            name="opacity-input"
+            max="1"
+            step="0.1"
+            value="1"
+            min="0"
+            id="opacityInput"
+            onchange="UpdateValues()"
+          />
+          <br />
+          <label for="border-color-input"> Cube border's color </label>
+          <input
+            type="color"
+            name="border-color-input"
+            value="#000000"
+            id="borderColorInput"
+            onchange="UpdateValues()"
+          />
+          <br />
+          <label for="border-width-input"> Cube border's width </label>
+          <input
+            type="range"
+            name="border-color-input"
+            min="0"
+            max="10"
+            value="1"
+            step="1"
+            id="borderWidthInput"
+            onchange="UpdateValues()"
+          />
+          <br />
+        </form>
+      </div>
+    </div>
+    <!-- Main scene -->
     <div class="scene">
       <div class="cube-collection" id="cubeParent"></div>
       <!-- <div class="cube">
