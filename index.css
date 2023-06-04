@@ -1,23 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
-.header {
+header {
+  background: linear-gradient(rgba(255, 255, 255, 1), 10%, rgba(0, 0, 0, 0));
   text-align: center;
   font-family: "Monoton", cursive;
   font-size: 72px;
-  background-color: var(--color3);
 }
 body {
   display: grid;
+  height: 110vh;
   grid-template-rows: minmax(80px, 1fr) minmax(80px, 1fr) 8fr minmax(80px, 1fr);
 }
-.nav {
+nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: "Share Tech Mono", monospace;
-  background: linear-gradient(var(--color3), 80%, rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    0,
+    rgba(255, 255, 255, 0.5),
+    10%,
+    rgba(0, 0, 0, 0)
+  );
 }
-.maincontent {
+main {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5),
+    20%,
+    rgba(0, 0, 0, 0)
+  );
   justify-content: center;
   align-items: center;
   display: flex;
@@ -26,14 +38,6 @@ body {
   height: 100%;
   width: 80%;
   opacity: 80%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    20%,
-    var(--color9),
-    80%,
-    rgba(255, 255, 255, 0)
-  );
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -47,4 +51,47 @@ body {
 .text-wrapper p {
   font-size: xx-large;
   font-family: "Share Tech Mono", monospace;
+}
+.patch-notes-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+  min-height: 30%;
+}
+.patch-note {
+  font-family: "Share Tech Mono", monospace;
+  height: 100%;
+  max-width: 33%;
+  border-radius: 25px;
+  border: 1px solid var(--color3);
+  background: rgba(255, 255, 255, 0.5);
+}
+.patch-note h3 {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 40px;
+  text-align: center;
+  margin: 10px;
+}
+.patch-note p,
+.patch-note li {
+  font-size: 30px;
+  text-align: justify;
+  margin: 10px;
+}
+.patch-note li {
+  margin-left: 40px;
+}
+.patch-note p:nth-child(2) {
+  color: red;
+  text-align: right;
+}
+
+footer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
